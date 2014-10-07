@@ -1,9 +1,17 @@
 package com.jieaode.neihan.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class UserEntity {
+public class UserEntity implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7443188975722218782L;
+	
 	/*
 	 * 头像网址
 	 */
@@ -39,4 +47,21 @@ public class UserEntity {
 			
 		}
 	}
+
+public String getAvatarUrl() {
+	return avatarUrl;
+}
+
+public Long getUserId() {
+	return userId;
+}
+
+public String getName() {
+	return name;
+}
+
+public boolean isUserVerified() {
+	return userVerified;
+}
+	
 }

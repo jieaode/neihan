@@ -3,9 +3,44 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    <TextView 
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="@string/main_tab_item_text"/>
+
+    <TextView
+        android:id="@+id/textlist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_tab_item_text" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/textlsit_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+
+        <!--  <ListView
+            android:id="@+id/textlsit_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>   --> 
+        <!-- 快速工具条 -->
+
+        <include
+            android:id="@+id/textlist_quick_tools"
+            layout="@layout/textlist_header_tools" />
+
+        <!-- 新消息提示条 -->
+
+        <TextView
+            android:id="@+id/textlist_new_notify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#99000099"
+            android:gravity="center"
+            android:text="30条新信息" />
+    </FrameLayout>
 
 </LinearLayout>

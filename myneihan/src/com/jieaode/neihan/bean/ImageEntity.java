@@ -1,10 +1,16 @@
 package com.jieaode.neihan.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ImageEntity extends TestEntity {
+public class ImageEntity extends TestEntity implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4330666527899574344L;
 	private ImageUrlList largeList;
 	private ImageUrlList middleList;
 

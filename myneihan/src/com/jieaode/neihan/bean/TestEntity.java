@@ -1,5 +1,7 @@
 package com.jieaode.neihan.bean;
 
+import java.io.Serializable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -23,7 +25,12 @@ import android.R.integer;
  * 
  */
 
-public class TestEntity {
+public class TestEntity implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7846326414079052498L;
 
 	/*
 	 * 代表点赞的个数
